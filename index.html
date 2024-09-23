@@ -3,14 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello world</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <script src="app.js">app.js</script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input, select, button { padding: 10px; font-size: 18px; margin: 5px; }
+    </style>
 </head>
 <body>
-    <h1>Hello world</h1>
-    <button onclick="sayHello()">Click me!</button>
-    <p id="hello"></p>
+    <h1>Kalkulačka</h1>
+
+<!-- Pole pro zadání prvního čísla -->
+<input type="number" id="number1" placeholder="Zadej první číslo">
+
+<!-- Pole pro výběr operace -->
+<select id="operation">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+
+<!-- Pole pro zadání druhého čísla -->
+<input type="number" id="number2" placeholder="Zadej druhé číslo">
+<br>
+
+<!-- Tlačítko pro výpočet -->
+<button onclick="calculate()">Spočítat</button>
+
+<!-- Pole pro výpis výsledku -->
+<div>
+    <h3>Výsledek: <span id="result">---</span></h3>
+</div>
+
+<script>
+    function calculate() {
+        // Získání hodnot z polí
+        const num1 = parseFloat(document.getElementById('number1').value);
+        const operation = document.getElementById('operation').value;
+        const num2 = parseFloat(document.getElementById('number2').value);
+        let result;
+
+        // Provedení operace
+        if (isNaN(num1) || isNaN(num2)) {
+            result = "Chyba: Zadejte platná čísla";
+        } else {
+            switch (operation) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        result = "Chyba: Dělení nulou";
+                    } else {
+                        result = num1 / num2;
+                    }
+                    break;
+                default:
+                    result = "Neplatná operace";
+            }
+        }
+
+        // Výpis výsledku
+        document.getElementById('result').innerText = result;
+    }
+</script>
 </body>
 </html>

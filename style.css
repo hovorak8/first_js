@@ -1,3 +1,15 @@
 body {
     text-align: center;
 }
+
+#number1 {
+    background-color: brown;
+}
+
+#number2 {
+    background-color: aqua ;
+}
+
+button{
+    background-color: yellowgreen;
+}
