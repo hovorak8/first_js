@@ -1,0 +1,34 @@
+{
+    "_comment1": "Povinné položky",
+    "name": "Moje PWA aplikace",         
+    "short_name": "MojePWA",             
+  
+    "_comment2": "Ikony aplikace v různých velikostech",
+    "icons": [
+      {
+        "src": "/icons/images.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/image.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+  
+    "_comment3": "URL adresa, na kterou se aplikace spustí",
+    "start_url": "/index.html",          
+  
+    "_comment4": "Zobrazení aplikace bez prvků prohlížeče",
+    "display": "standalone",             
+  
+    "_comment5": "Volitelné položky",
+    "background_color": "#FFFFFF",       
+    "theme_color": "#0000FF",            
+    "description": "Toto je ukázková PWA aplikace.", 
+    "orientation": "portrait",           
+    "scope": "/",                        
+    "lang": "cs-CZ",                     
+    "dir": "ltr"
+  }
