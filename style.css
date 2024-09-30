@@ -1,97 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Moderní font */
+    background-color: #f4f4f9; /* Světlé pozadí */
     text-align: center;
-    margin: 0;
     padding: 20px;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif; 
-    margin-top: 50px;
+    margin: 0;
 }
 
 .calculator {
-    max-width: 300px;
-    margin: 0 auto; /* Zarovná kalkulačku na střed */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px; /* Zaoblené rohy */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Jemný stín */
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 input, select, button {
-    width: 100%;
-    padding: 15px;
-    font-size: 18px;
-    margin: 10px 0;
-    box-sizing: border-box; /* Zajišťuje, že padding neovlivní velikost prvku */
+    width: 95px; /* Zúží pole na 30% šířky (pro PC) */
+    padding: 8px; /* Sníží výšku polí */
+    font-size: 16px; /* Menší písmo */
+    margin: 5px; /* Menší mezery mezi prvky */
+    border-radius: 6px; /* Mírně zaoblené rohy */
+    border: 1px solid #ccc; /* Jemné ohraničení */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); /* Lehký stín */
+    transition: all 0.3s ease;
 }
 
+input:focus, select:focus {
+    border-color: #007BFF; /* Modrý rámeček při zaměření */
+    outline: none; /* Odstranění výchozího modrého rámečku */
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
 h1 {
+    color: #333;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-/* Media query pro menší obrazovky */
+h3 {
+    font-size: 20px;
+    color: #555;
+}
+
+/* Pro mobilní zařízení */
 @media (max-width: 600px) {
     input, select, button {
-        font-size: 16px; /* Menší písmo pro menší obrazovky */
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-}
-
-#number1 {
-    background-color: aqua ;
-}
-
-#number2 {
-    background-color: aqua ;
-}
-
-button{
-    background-color: yellowgreen;
-}
-
-select{
-    background-color: red;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.calculator {
-    max-width: 400px; /* Na PC bude kalkulačka o něco širší */
-    margin: 0 auto; /* Zarovná kalkulačku na střed */
-}
-
-input, select, button {
-    padding: 10px;
-    font-size: 18px;
-    margin: 5px;
-    box-sizing: border-box; /* Zajišťuje, že padding neovlivní velikost prvku */
-}
-
-input, select {
-    width: 30%; /* Na PC budou pole menší a vedle sebe */
-}
-
-button {
-    width: 30%;
-}
-
-/* Media query pro menší obrazovky */
-@media (max-width: 600px) {
-    input, select, button {
-        width: 100%; /* Na mobilu zaberou 100 % šířky */
-        font-size: 16px; /* Menší písmo pro menší obrazovky */
-        padding: 10px;
-        margin: 10px 0; /* Větší mezery mezi prvky na mobilu */
+        width: 100%; /* Na mobilu zabírají 100% šířky */
+        padding: 10px; /* Mírně větší padding na mobilu */
+        font-size: 14px; /* Menší písmo pro mobilní obrazovky */
     }
 
     .calculator {
-        max-width: 100%; /* Na mobilu kalkulačka využije celou šířku obrazovky */
+        max-width: 100%;
+        padding: 15px;
     }
+}
+
+.rovnase
+{
+    background-color: orange;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 25px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.vyber
+{
+    background-color: green;
+    color: white;
+    width: 50px;
+    border-radius: 25px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.vysledek
+{
+    background-color: chocolate;
+    color: white;
+    width: 50px;
+    border-radius: 25px;
+    font-size: 25px;
+    text-align: center; 
 }
