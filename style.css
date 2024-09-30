@@ -1,9 +1,45 @@
 body {
+    font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+    margin-top: 50px;
+}
+
+.calculator {
+    max-width: 300px;
+    margin: 0 auto; /* Zarovná kalkulačku na střed */
+}
+
+input, select, button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    margin: 10px 0;
+    box-sizing: border-box; /* Zajišťuje, že padding neovlivní velikost prvku */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Media query pro menší obrazovky */
+@media (max-width: 600px) {
+    input, select, button {
+        font-size: 16px; /* Menší písmo pro menší obrazovky */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
 }
 
 #number1 {
-    background-color: brown;
+    background-color: aqua ;
 }
 
 #number2 {
@@ -12,4 +48,50 @@ body {
 
 button{
     background-color: yellowgreen;
+}
+
+select{
+    background-color: red;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.calculator {
+    max-width: 400px; /* Na PC bude kalkulačka o něco širší */
+    margin: 0 auto; /* Zarovná kalkulačku na střed */
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 18px;
+    margin: 5px;
+    box-sizing: border-box; /* Zajišťuje, že padding neovlivní velikost prvku */
+}
+
+input, select {
+    width: 30%; /* Na PC budou pole menší a vedle sebe */
+}
+
+button {
+    width: 30%;
+}
+
+/* Media query pro menší obrazovky */
+@media (max-width: 600px) {
+    input, select, button {
+        width: 100%; /* Na mobilu zaberou 100 % šířky */
+        font-size: 16px; /* Menší písmo pro menší obrazovky */
+        padding: 10px;
+        margin: 10px 0; /* Větší mezery mezi prvky na mobilu */
+    }
+
+    .calculator {
+        max-width: 100%; /* Na mobilu kalkulačka využije celou šířku obrazovky */
+    }
 }
