@@ -58,7 +58,7 @@ h3 {
 @media (max-width: 600px) {
     input, select, button {
         width: 100%; /* Na mobilu zabírají 100% šířky */
-        padding: 10px; /* Mírně větší padding na mobilu */
+         /* Mírně větší padding na mobilu */
         font-size: 14px; /* Menší písmo pro mobilní obrazovky */
     }
 
